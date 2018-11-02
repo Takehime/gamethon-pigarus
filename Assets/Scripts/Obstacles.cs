@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacles : MonoBehaviour {
+public class ObstaclesBehaviour : MonoBehaviour {
 
 	[SerializeField] protected Vector2 velocity;
+	[SerializeField] protected GameObject prefab;
+	
 
 	// Use this for initialization
 	// virtual protected void Start() {
 
 	// }
 
-	virtual protected void Spawn() {
-
+	public virtual void Spawn() {
+		print("should be overrided");
 	}
 
-	virtual protected void Destroy() {
+	protected virtual void Destroy() {
 		Destroy(this.gameObject);
 	}
 
