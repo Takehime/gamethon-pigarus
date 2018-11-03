@@ -8,6 +8,7 @@ TagManager:
   - bubble
   - floor
   - floater
+  - victory counter container
   layers:
   - Default
   - TransparentFX
