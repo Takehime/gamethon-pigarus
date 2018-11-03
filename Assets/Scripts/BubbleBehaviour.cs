@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class BubbleBehaviour : ObstaclesBehaviour {
 
-	float baseVelocity = -5.0f;
 
 	// Use this for initialization
 	void Start () {
-		this.velocity.x = baseVelocity;
 	}
 	
 	// Update is called once per frame
@@ -16,7 +14,8 @@ public class BubbleBehaviour : ObstaclesBehaviour {
 		GetComponent<Rigidbody2D>().velocity = velocity;
 	}
 
-	 public new static void Spawn(GameObject baseObject) {
-		 Instantiate(baseObject);
+	 public static void Spawn(GameObject baseObject, float baseVelocity) {
+		 GameObject newBubble = Instantiate(baseObject);
+		 newBubble.GetComponent<Rigidbody2D>().velocity = new Vector2(baseVelocity, 0.0f);
 	}
 }

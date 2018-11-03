@@ -6,6 +6,7 @@ public class obsgen : MonoBehaviour {
 	// System.Random rand;
 
 	[SerializeField] GameObject baseBubble;
+	[SerializeField] float baseVelocity = -5.0f;
 
 	enum Obstacles {
 		Bubble = 666,
@@ -26,7 +27,7 @@ public class obsgen : MonoBehaviour {
 				if (rnd < (int) obs) {
 					switch (obs) {
 						case Obstacles.Bubble:
-						BubbleBehaviour.Spawn(baseBubble);
+						BubbleBehaviour.Spawn(baseBubble, baseVelocity);
 						break;
 					default:
 						break;
