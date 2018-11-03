@@ -10,11 +10,12 @@ public class obsgen : MonoBehaviour {
 	[SerializeField] Vector2 spawnFloaterVelocity = new Vector2(-5.0f, 0.0f);
 	[SerializeField] Vector2 spawnBirdVelocity = new Vector2(-5.0f, -2.0f);
     [SerializeField] float maxTimeNone = 3f;
+	[SerializeField] float randomWait_min = 0.8f, randomWait_max = 2f;
     float timeNone = 0.0f;
 
 	enum Obstacles {
 		Bird = 10,
-		Bubble = 70,
+		Bubble = 60,
 		Floater = 90,
 		None = 100,
 	}
@@ -55,7 +56,8 @@ public class obsgen : MonoBehaviour {
 					break;
 				}
 			}
-            newWait = Random.Range(0.8f, 2.0f);
+
+            newWait = Random.Range(randomWait_min, randomWait_max);
             yield return new WaitForSeconds(newWait);
 		}
 	}
