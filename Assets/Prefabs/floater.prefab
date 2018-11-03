@@ -102,6 +102,9 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
   prefab: {fileID: 0}
   bounceImpulse: 500
+  tweenFactor: {x: 1.5, y: 0.8}
+  tweenSquishInDuration: 0.15
+  tweenSquishOutDuration: 0.05
 --- !u!212 &212088297586794806
 SpriteRenderer:
   m_ObjectHideFlags: 1
