@@ -34,7 +34,10 @@ public class Movement : MonoBehaviour {
 
     private void Update()
     {
-        if (!behavior.dead) {
+        if (behavior.dead) {
+            rb.velocity = Vector2.zero;
+        }
+        else {
             if (!dashLock)
             {
                 if (Input.GetKey(leftButton))
@@ -72,7 +75,7 @@ public class Movement : MonoBehaviour {
             yield return null;
         }
     }
-    
+
 	private IEnumerator Dash(Vector2 dir)
     {
         if (!dashLock)
