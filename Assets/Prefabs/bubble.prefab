@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114571315930312596}
   m_Layer: 0
   m_Name: bubble
-  m_TagString: destroy
+  m_TagString: bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0}
   prefab: {fileID: 0}
+  bounceImpulse: 500
 --- !u!212 &212705445142605370
 SpriteRenderer:
   m_ObjectHideFlags: 1

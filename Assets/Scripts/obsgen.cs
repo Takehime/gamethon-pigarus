@@ -22,7 +22,7 @@ public class obsgen : MonoBehaviour {
 	private IEnumerator CreateObstacle() {
 		for (;;) {
 			int rnd = new System.Random().Next(1, 1000);
-			print(rnd);
+			// print(rnd);
 			foreach (Obstacles obs in System.Enum.GetValues(typeof(Obstacles))) {
 				if (rnd < (int) obs) {
 					switch (obs) {

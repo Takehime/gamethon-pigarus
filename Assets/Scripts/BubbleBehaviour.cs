@@ -15,7 +15,7 @@ public class BubbleBehaviour : ObstaclesBehaviour {
 	}
 
 	 public static void Spawn(GameObject baseObject, float baseVelocity) {
-		 GameObject newBubble = Instantiate(baseObject);
-		 newBubble.GetComponent<Rigidbody2D>().velocity = new Vector2(baseVelocity, 0.0f);
+		GameObject newBubble = Instantiate(baseObject);
+		newBubble.GetComponent<BubbleBehaviour>().velocity.x = baseVelocity; 
 	}
 }

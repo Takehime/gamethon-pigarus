@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1839045112155044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.14, y: -0.07, z: 0}
+  m_LocalPosition: {x: 5.04, y: -0.07, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +57,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1.5
+  m_GravityScale: 0.1
   m_Material: {fileID: 6200000, guid: 2d089a44bc9c14ca585d318b35a3d1e3, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -99,11 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47452c8b5c909414683dcb03fd00e516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonDown: 115
-  ButtonRight: 100
-  ButtonLeft: 97
+  ButtonDown: 107
+  ButtonRight: 108
+  ButtonLeft: 106
   dashSpeed: 500
   movementSpeed: 10
+  playerBegin: {fileID: 0}
+  deadTime: 2
 --- !u!212 &212891765555261364
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -140,7 +142,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.764151, g: 0.111739054, b: 0.111739054, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
