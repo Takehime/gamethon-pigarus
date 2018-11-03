@@ -26,8 +26,9 @@ public class FloaterBehaviour : ObstaclesBehaviour {
         });
     }
 	
-	public static void Spawn(GameObject baseObject, Vector2 baseVelocity) {
+	public static void Spawn(GameObject baseObject, Vector2 baseVelocity, Vector3 startPosition) {
 		GameObject newFloater = Instantiate(baseObject);
-		newFloater.GetComponent<FloaterBehaviour>().velocity = baseVelocity; 
+		newFloater.GetComponent<FloaterBehaviour>().velocity = baseVelocity;
+        newFloater.transform.position = startPosition;
 	}
 }

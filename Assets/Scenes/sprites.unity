@@ -167,7 +167,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a894073046ae348128c69f16e3a3e969, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 530a0f7f59ebf4d2796e79cbe6478b93, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -333,7 +333,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a894073046ae348128c69f16e3a3e969, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 530a0f7f59ebf4d2796e79cbe6478b93, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -500,6 +500,65 @@ Prefab:
       propertyPath: m_Name
       value: down (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 212506316769292852, guid: c6849d05398144a16801856d88af11f3,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 07922e16bf88d4242b4cb489fa9fd8ca,
+        type: 3}
+    - target: {fileID: 4883491142405798, guid: c6849d05398144a16801856d88af11f3, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883491142405798, guid: c6849d05398144a16801856d88af11f3, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61059087872923348, guid: c6849d05398144a16801856d88af11f3,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61059087872923348, guid: c6849d05398144a16801856d88af11f3,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61059087872923348, guid: c6849d05398144a16801856d88af11f3,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61059087872923348, guid: c6849d05398144a16801856d88af11f3,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61059087872923348, guid: c6849d05398144a16801856d88af11f3,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 61059087872923348, guid: c6849d05398144a16801856d88af11f3,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 61059087872923348, guid: c6849d05398144a16801856d88af11f3,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61059087872923348, guid: c6849d05398144a16801856d88af11f3,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 61059087872923348, guid: c6849d05398144a16801856d88af11f3,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.88
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6849d05398144a16801856d88af11f3, type: 2}
   m_IsPrefabAsset: 0
@@ -558,11 +617,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4811359906366082, guid: 37071222e41014765861d3520b6490d2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 15.63
+      value: 8.97
       objectReference: {fileID: 0}
     - target: {fileID: 4811359906366082, guid: 37071222e41014765861d3520b6490d2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.69
+      value: -3.33
       objectReference: {fileID: 0}
     - target: {fileID: 4811359906366082, guid: 37071222e41014765861d3520b6490d2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -592,6 +651,11 @@ Prefab:
       propertyPath: m_Name
       value: obsgen (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1597341309379484, guid: 37071222e41014765861d3520b6490d2, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37071222e41014765861d3520b6490d2, type: 2}
   m_IsPrefabAsset: 0
