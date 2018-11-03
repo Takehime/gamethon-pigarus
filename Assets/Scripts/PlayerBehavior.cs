@@ -8,6 +8,8 @@ public enum DashDirection{
 
 public class PlayerBehavior : MonoBehaviour {
 	
+	public PlayerData data;
+
 	[SerializeField] private Transform playerBegin;
 	[SerializeField] private float deadTime;
 
@@ -22,58 +24,34 @@ public class PlayerBehavior : MonoBehaviour {
 		if (dead) {
 			rb.velocity = Vector2.zero;
 		}
-		// else {
-		// 	if (Input.GetKeyDown(ButtonDown)) {
-		// 		Dash(DashDirection.DOWN);
-		// 	}
-		// 	if (Input.GetKey(ButtonRight)) {
-		// 		Dash(DashDirection.RIGHT);
-		// 	}		
-		// 	if (Input.GetKey(ButtonLeft)) {
-		// 		Dash(DashDirection.LEFT);
-		// 	}
-		// }
 	}
-	
-	// void Dash(DashDirection dir) {
-	// 	Vector2 speedVector;
-	// 	switch (dir) {
-	// 		case DashDirection.DOWN:
-	// 			rb.velocity = new Vector2(rb.velocity.x, 0.0f);
-	// 			speedVector = new Vector2(0, -downdashSpeed*2);
-	// 			rb.AddForce(speedVector);
-	// 			break;
-	// 		case DashDirection.LEFT:
-	// 			rb.velocity = new Vector2(0,rb.velocity.y);			
-	// 			speedVector = new Vector2(-dashSpeed, 0);
-	// 			rb.AddForce(speedVector);				
-	// 			break;
-	// 		case DashDirection.RIGHT:
-	// 			rb.velocity = new Vector2(0,rb.velocity.y);			
-	// 			speedVector = new Vector2(dashSpeed, 0);
-	// 			rb.AddForce(speedVector);				
-	// 			break;	
-	// 	}
-	// }
 
 	void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.gameObject.CompareTag("floor")) {
-			GetComponent<Rigidbody2D>().Sleep();
-			GetComponent<BoxCollider2D>().enabled = false;
-			Color color = GetComponent<SpriteRenderer>().color;
-			color.a = color.a / 3 * 2;
-			GetComponent<SpriteRenderer>().color = color;
-			this.transform.position = playerBegin.position;
 			StartCoroutine(Die());
 		}
 	}
 
+	public void SetData(PlayerData data) {
+		this.data = data;
+		this.GetComponentInChildren<SpriteRenderer>().color = data.color;
+	}
+
 	private IEnumerator Die() {
-		dead = true;
-		yield return new WaitForSeconds(deadTime);
-		dead = false;
 		Color color = GetComponent<SpriteRenderer>().color;
-		print(color);
+
+		GetComponent<Rigidbody2D>().Sleep();
+		GetComponent<BoxCollider2D>().enabled = false;
+		color.a = color.a / 3 * 2;
+		GetComponent<SpriteRenderer>().color = color;
+		this.transform.position = playerBegin.position;
+		dead = true;
+
+		GameController.GetGameController().GiveVictoryToOtherPlayer(data.id);
+		
+		yield return new WaitForSeconds(deadTime);
+
+		dead = false;
 		color.a = 1f;
 		GetComponent<SpriteRenderer>().color = color;
 		GetComponent<Rigidbody2D>().WakeUp();

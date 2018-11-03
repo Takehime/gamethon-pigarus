@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114903267078768336}
   - component: {fileID: 114137975653017958}
   m_Layer: 0
-  m_Name: Floater
+  m_Name: floater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,6 +108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 30000
+  tweenFactor: {x: 1.5, y: 0.8}
+  tweenSquishInDuration: 0.15
+  tweenSquishOutDuration: 0.05
 --- !u!212 &212846618706791808
 SpriteRenderer:
   m_ObjectHideFlags: 1
