@@ -52,3 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseBubble: {fileID: 1832294042552262, guid: 45bc702b35065461bb8388e56a8e86cd, type: 2}
+  baseFloater: {fileID: 1468926846989034, guid: 2cbbbd8a7303f4549b560fc6dfbf3f91,
+    type: 2}
+  spawnBubbleVelocity: {x: -5, y: 0}
+  spawnFloaterVelocity: {x: -5, y: 0}
