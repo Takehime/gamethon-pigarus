@@ -1164,16 +1164,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114429917760279294, guid: 864d7912450c1470d96f4feed8355add,
-        type: 2}
-      propertyPath: players.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114429917760279294, guid: 864d7912450c1470d96f4feed8355add,
-        type: 2}
-      propertyPath: playerData.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4349597496744570, guid: 864d7912450c1470d96f4feed8355add, type: 2}
       propertyPath: m_LocalPosition.x
       value: 15.739227
@@ -1211,50 +1201,6 @@ Prefab:
       propertyPath: victoryCounterContainer
       value: 
       objectReference: {fileID: 1148012971}
-    - target: {fileID: 1449512166895846, guid: 864d7912450c1470d96f4feed8355add, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114429917760279294, guid: 864d7912450c1470d96f4feed8355add,
-        type: 2}
-      propertyPath: playerData.Array.data[0].color.r
-      value: 0.8301887
-      objectReference: {fileID: 0}
-    - target: {fileID: 114429917760279294, guid: 864d7912450c1470d96f4feed8355add,
-        type: 2}
-      propertyPath: playerData.Array.data[0].color.g
-      value: 0.17621933
-      objectReference: {fileID: 0}
-    - target: {fileID: 114429917760279294, guid: 864d7912450c1470d96f4feed8355add,
-        type: 2}
-      propertyPath: playerData.Array.data[0].color.b
-      value: 0.17621933
-      objectReference: {fileID: 0}
-    - target: {fileID: 114429917760279294, guid: 864d7912450c1470d96f4feed8355add,
-        type: 2}
-      propertyPath: playerData.Array.data[0].color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114429917760279294, guid: 864d7912450c1470d96f4feed8355add,
-        type: 2}
-      propertyPath: playerData.Array.data[1].color.a
-      value: 0.9529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 114429917760279294, guid: 864d7912450c1470d96f4feed8355add,
-        type: 2}
-      propertyPath: playerData.Array.data[1].color.b
-      value: 0.9529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 114429917760279294, guid: 864d7912450c1470d96f4feed8355add,
-        type: 2}
-      propertyPath: playerData.Array.data[0].id
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114429917760279294, guid: 864d7912450c1470d96f4feed8355add,
-        type: 2}
-      propertyPath: playerData.Array.data[1].id
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 114429917760279294, guid: 864d7912450c1470d96f4feed8355add,
         type: 2}
       propertyPath: players.Array.data[0]
