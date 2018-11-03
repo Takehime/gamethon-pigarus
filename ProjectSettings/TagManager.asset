@@ -10,6 +10,7 @@ TagManager:
   - floater
   - victory counter container
   - Bird
+  - PlayerDatabase
   layers:
   - Default
   - TransparentFX

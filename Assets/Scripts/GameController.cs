@@ -2,13 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
-
-[System.Serializable]
-public class PlayerData {
-    public Color color;
-    public int id;
-}
 
 public class GameController : MonoBehaviour {
     public static GameController GetGameController() {
@@ -24,7 +19,6 @@ public class GameController : MonoBehaviour {
 
     [SerializeField] GameObject victoryCounterContainer, victoryCounterMarkPrefab;
     [SerializeField] int rounds = 5;
-    [SerializeField] List<PlayerData> playerData = new List<PlayerData>();
     public List<int> playerVictories = new List<int>();
 
     [SerializeField] float victoryMarkAppearDuration = 0.5f;
@@ -33,14 +27,17 @@ public class GameController : MonoBehaviour {
     int currentRound = 0;
 
     public List<GameObject> players = new List<GameObject>();
+    public PlayerDatabase database;
 
 	void Start () {
+        database = PlayerDatabase.GetPlayerDatabase();
+
         victoryCounterContainer = GameObject.FindWithTag("victory counter container");
         InitializeVictoryCounter(victoryCounterContainer);
 
-        foreach (var pd in playerData) {
+        foreach (var pd in database.playerData) {
             playerVictories.Add(0);
-            players[playerData.IndexOf(pd)].GetComponentInChildren<PlayerBehavior>().SetData(pd);
+            players[database.playerData.IndexOf(pd)].GetComponentInChildren<PlayerBehavior>().SetData(pd);
         }
 	}
 	
@@ -67,12 +64,18 @@ public class GameController : MonoBehaviour {
         playerVictories[data.id]++;
         if (playerVictories[data.id] > Mathf.Floor(rounds / 2)) {
             Debug.Log("End game. Victory: player " + data.id);
-            Debug.Break();
+            database.winner = data;
+            StartCoroutine(TransitionToGameOver());
         }
     }
 
+    public IEnumerator TransitionToGameOver() {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Victory Scene");
+    }
+
     public void GiveVictoryToOtherPlayer(int playerId) {
-        foreach (var pd in playerData) {
+        foreach (var pd in database.playerData) {
             if (pd.id != playerId) {
                 GiveRoundVictory(pd);
                 return;

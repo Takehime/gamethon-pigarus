@@ -18,13 +18,6 @@ public class FloaterBehaviour : ObstaclesBehaviour {
 	void Update () {
 		GetComponent<Rigidbody2D>().velocity = velocity;
 	}
-
-    public void Squish() {
-        this.transform.DOScale(new Vector3(originalScale.x * tweenFactor.x, originalScale.y * tweenFactor.y), tweenSquishInDuration).OnComplete(() =>
-        {
-            this.transform.DOScale(originalScale, tweenSquishOutDuration);
-        });
-    }
 	
 	public static void Spawn(GameObject baseObject, Vector2 baseVelocity, Vector3 startPosition) {
 		GameObject newFloater = Instantiate(baseObject);

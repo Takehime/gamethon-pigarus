@@ -25,32 +25,38 @@ public class Movement : MonoBehaviour {
     public bool diveLock;
 
     private Rigidbody2D rb;
+    public PlayerBehavior behavior;
 
 	private void Start () {
         rb = GetComponent<Rigidbody2D>();
+        behavior = this.GetComponentInChildren<PlayerBehavior>();
 	}
+
     private void Update()
     {
-        if (!dashLock)
-        {
-            if (Input.GetKey(leftButton))
+        if (!behavior.dead) {
+            if (!dashLock)
             {
-                Glide(Vector2.left);
-                if (Input.GetKeyDown(leftButton))
-                    StartCoroutine(MovementHandler(leftButton, Vector2.left));
+                if (Input.GetKey(leftButton))
+                {
+                    Glide(Vector2.left);
+                    if (Input.GetKeyDown(leftButton))
+                        StartCoroutine(MovementHandler(leftButton, Vector2.left));
+                }
+                if (Input.GetKey(rightButton))
+                {
+                    Glide(Vector2.right);
+                    if (Input.GetKeyDown(rightButton))
+                        StartCoroutine(MovementHandler(rightButton, Vector2.right));
+                }
             }
-            if (Input.GetKey(rightButton))
+            if (!diveLock && Input.GetKeyDown(downButton))
             {
-                Glide(Vector2.right);
-                if (Input.GetKeyDown(rightButton))
-                    StartCoroutine(MovementHandler(rightButton, Vector2.right));
+                StartCoroutine(Dive());
             }
-        }
-        if (!diveLock && Input.GetKeyDown(downButton))
-        {
-            StartCoroutine(Dive());
         }
     }
+
     private IEnumerator MovementHandler(KeyCode key, Vector2 dir)
     {
         float timer = dashOffsetTime; 
@@ -66,6 +72,7 @@ public class Movement : MonoBehaviour {
             yield return null;
         }
     }
+    
 	private IEnumerator Dash(Vector2 dir)
     {
         if (!dashLock)

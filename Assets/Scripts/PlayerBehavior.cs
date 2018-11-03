@@ -14,16 +14,10 @@ public class PlayerBehavior : MonoBehaviour {
 	[SerializeField] private float deadTime;
 
 	private Rigidbody2D rb; 
-	private bool dead;
+	[HideInInspector] public bool dead;
 
 	void Start () {
 		rb = this.GetComponent<Rigidbody2D>();
-	}
-	
-	void Update () {
-		if (dead) {
-			rb.velocity = Vector2.zero;
-		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
