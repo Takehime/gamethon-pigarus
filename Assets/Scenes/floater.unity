@@ -625,11 +625,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114687802569601742, guid: 37071222e41014765861d3520b6490d2,
-        type: 2}
-      propertyPath: baseVelocity
-      value: -5
-      objectReference: {fileID: 0}
     - target: {fileID: 1597341309379484, guid: 37071222e41014765861d3520b6490d2, type: 2}
       propertyPath: m_Name
       value: obsgen (1)
@@ -653,7 +648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1604755905
 BoxCollider2D:
   m_ObjectHideFlags: 0
