@@ -1211,6 +1211,11 @@ Prefab:
       propertyPath: players.Array.data[1]
       value: 
       objectReference: {fileID: 764262369}
+    - target: {fileID: 114429917760279294, guid: 864d7912450c1470d96f4feed8355add,
+        type: 2}
+      propertyPath: rounds
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 864d7912450c1470d96f4feed8355add, type: 2}
   m_IsPrefabAsset: 0

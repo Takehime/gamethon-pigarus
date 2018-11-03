@@ -13,10 +13,10 @@ public class obsgen : MonoBehaviour {
 	[SerializeField] float randomWait_min = 0.8f, randomWait_max = 2f;
     float timeNone = 0.0f;
 
-	enum Obstacles {
+	public enum Obstacles {
 		Bird = 10,
-		Bubble = 60,
-		Floater = 90,
+		Bubble = 70,
+		Floater = 85,
 		None = 100,
 	}
 

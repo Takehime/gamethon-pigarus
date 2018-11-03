@@ -55,7 +55,9 @@ MonoBehaviour:
   baseFloater: {fileID: 1334695442114666, guid: bd44b77b2b6443d4789e45204a50d985,
     type: 2}
   baseBird: {fileID: 1076890210176122, guid: ab7352033ccdb164f8b7a76e428ae8a5, type: 2}
-  spawnBubbleVelocity: {x: -5, y: 0}
-  spawnFloaterVelocity: {x: -5, y: 0}
+  spawnBubbleVelocity: {x: -5.5, y: 0}
+  spawnFloaterVelocity: {x: -4, y: 0}
   spawnBirdVelocity: {x: -5, y: -2}
-  maxTimeNone: 3
+  maxTimeNone: 1.5
+  randomWait_min: 0.4
+  randomWait_max: 0.8
