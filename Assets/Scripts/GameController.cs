@@ -65,6 +65,7 @@ public class GameController : MonoBehaviour {
         if (playerVictories[data.id] > Mathf.Floor(rounds / 2)) {
             Debug.Log("End game. Victory: player " + data.id);
             database.winner = data;
+            database.loser = database.playerData[data.id == 0 ? 1 : 0];            
             StartCoroutine(TransitionToGameOver());
         }
     }

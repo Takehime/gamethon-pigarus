@@ -22,6 +22,7 @@ public class PlayerDatabase : MonoBehaviour {
 
     public List<PlayerData> playerData = new List<PlayerData>();
 	public PlayerData winner = null;
+	public PlayerData loser = null;
 
 	void Start() {
 		DontDestroyOnLoad(this.gameObject);
