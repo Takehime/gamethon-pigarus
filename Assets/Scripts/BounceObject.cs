@@ -23,7 +23,7 @@ public class BounceObject : MonoBehaviour {
             if (this.gameObject.tag == "Bird") {
                 rb.AddForce(Vector2.left * bounceForce);
             } else {
-                rb.AddForce(Vector2.up * bounceForce);                
+                rb.AddForce(Vector2.up * bounceForce);           
             }
 
             OnTouch();
@@ -41,5 +41,10 @@ public class BounceObject : MonoBehaviour {
         {
             this.transform.DOScale(originalScale, tweenSquishOutDuration);
         });
+    }
+
+    public void destroyBubble() {
+        //trigger na animaçao
+        Destroy(this.gameObject);
     }
 }

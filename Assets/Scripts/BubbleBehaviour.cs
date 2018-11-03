@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BubbleBehaviour : ObstaclesBehaviour {
 
-
 	// Use this for initialization
 	void Start () {
 	}
@@ -19,4 +18,5 @@ public class BubbleBehaviour : ObstaclesBehaviour {
 		newBubble.GetComponent<BubbleBehaviour>().velocity = baseVelocity;
         newBubble.transform.position = startPosition;
 	}
+ 
 }

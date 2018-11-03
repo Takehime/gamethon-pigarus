@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50706449604040554}
   - component: {fileID: 114496550661722656}
   - component: {fileID: 114903267078768336}
+  - component: {fileID: 114275571231948586}
   m_Layer: 0
   m_Name: bubble
   m_TagString: Untagged
@@ -79,6 +80,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114275571231948586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334695442114666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c70f0497ae3c3743add14f76893dc7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 15000
+  tweenFactor: {x: 1.5, y: 0.8}
+  tweenSquishInDuration: 0.15
+  tweenSquishOutDuration: 0.05
 --- !u!114 &114496550661722656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eecb370ed0013dc4694fab5d9b2ebd5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 30000
+  bounceForce: 0
   tweenFactor: {x: 1.5, y: 0.8}
   tweenSquishInDuration: 0.15
   tweenSquishOutDuration: 0.05
