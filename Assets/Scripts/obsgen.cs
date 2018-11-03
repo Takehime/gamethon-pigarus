@@ -5,15 +5,17 @@ using UnityEngine;
 public class obsgen : MonoBehaviour {
 	// System.Random rand;
 
-	[SerializeField] GameObject baseBubble, baseFloater;
+	[SerializeField] GameObject baseBubble, baseFloater, baseBird;
 	[SerializeField] Vector2 spawnBubbleVelocity = new Vector2(-5.0f, 0.0f);
 	[SerializeField] Vector2 spawnFloaterVelocity = new Vector2(-5.0f, 0.0f);
+	[SerializeField] Vector2 spawnBirdVelocity = new Vector2(-5.0f, -2.0f);
     [SerializeField] float maxTimeNone = 3f;
     float timeNone = 0.0f;
 
 	enum Obstacles {
-		Floater = 50,
-		Bubble = 66,
+		Bird = 80,
+		Bubble = 90,
+		Floater = 85,
 		None = 100,
 	}
 
@@ -38,6 +40,10 @@ public class obsgen : MonoBehaviour {
 						case Obstacles.Floater:
                             FloaterBehaviour.Spawn(baseFloater, spawnFloaterVelocity, this.transform.position);
                             newWait = 0.0f;
+							break;
+						case Obstacles.Bird:
+							Vector2 pos = new Vector2(this.transform.position.x, this.transform.position.y+6);
+							BirdBehaviour.Spawn(baseBird, spawnBirdVelocity, pos);
 							break;
 						default:
                             timeNone += newWait;

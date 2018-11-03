@@ -9,6 +9,7 @@ TagManager:
   - floor
   - floater
   - victory counter container
+  - Bird
   layers:
   - Default
   - TransparentFX

@@ -23,7 +23,7 @@ GameObject:
   m_Layer: 0
   m_Name: obsgen
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1597341309379484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.63, y: -3.69, z: 0.9453125}
+  m_LocalPosition: {x: 8.97, y: -3.33, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,8 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71dfb3756d64d4b8f85ad14e6adc455d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseBubble: {fileID: 1832294042552262, guid: 45bc702b35065461bb8388e56a8e86cd, type: 2}
-  baseFloater: {fileID: 1468926846989034, guid: 2cbbbd8a7303f4549b560fc6dfbf3f91,
+  baseBubble: {fileID: 1334695442114666, guid: bf63c55e3626cca4aa3bff05410893b0, type: 2}
+  baseFloater: {fileID: 1334695442114666, guid: bd44b77b2b6443d4789e45204a50d985,
     type: 2}
+  baseBird: {fileID: 1076890210176122, guid: ab7352033ccdb164f8b7a76e428ae8a5, type: 2}
   spawnBubbleVelocity: {x: -5, y: 0}
   spawnFloaterVelocity: {x: -5, y: 0}
+  spawnBirdVelocity: {x: -5, y: -2}
+  maxTimeNone: 3

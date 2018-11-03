@@ -20,7 +20,12 @@ public class BounceObject : MonoBehaviour {
         {
             var rb = collision.gameObject.GetComponent<Rigidbody2D>();
             rb.velocity = Vector2.zero;
-            rb.AddForce(Vector2.up * bounceForce);
+            if (this.gameObject.tag == "Bird") {
+                rb.AddForce(Vector2.left * bounceForce);
+            } else {
+                rb.AddForce(Vector2.up * bounceForce);                
+            }
+
             OnTouch();
         }
     }
