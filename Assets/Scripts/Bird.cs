@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bubble : BounceObject {
+public class Bird : BounceObject {
 
-	public AudioClip bubbleSound;
-	public AudioClip bubbleSound2;
+	public AudioClip birdSound;
 
 	// Use this for initialization
 	void Start () {
@@ -18,10 +17,8 @@ public class Bubble : BounceObject {
 	}
 
 	protected override void OnTouch() {
-		print("onTouch Bubble");
 		AudioSource audio = AudioSourceController.GetAudioSourceController().GetComponent<AudioSource>();
-		audio.PlayOneShot(bubbleSound);
-		audio.PlayOneShot(bubbleSound2);
-		Destroy(this.gameObject);
+		audio.PlayOneShot(birdSound);
 	}
+
 }

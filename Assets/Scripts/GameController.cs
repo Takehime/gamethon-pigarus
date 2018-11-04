@@ -29,12 +29,15 @@ public class GameController : MonoBehaviour {
     public List<GameObject> players = new List<GameObject>();
     public PlayerDatabase database;
     public GameObject worldCanvasMatchPoint;
+    public GameObject audioSourcePrefab;
 
 	void Start () {
         database = PlayerDatabase.GetPlayerDatabase();
 
         victoryCounterContainer = GameObject.FindWithTag("victory counter container");
         InitializeVictoryCounter(victoryCounterContainer);
+
+        Instantiate(audioSourcePrefab);
 
         foreach (var pd in database.playerData) {
             playerVictories.Add(0);
