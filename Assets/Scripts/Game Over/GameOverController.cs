@@ -13,7 +13,7 @@ public class GameOverController : MonoBehaviour {
 
 	void Start() {
 		database = PlayerDatabase.GetPlayerDatabase();
-		victoryText.text = "WINNER: #" + (database.winner.id + 1);
+		victoryText.text = "PLAYER " + (database.winner.id + 1) + " is the WINNER";
 		winnerImage.color = database.winner.color;
 		loserImage.color = database.loser.color;
 	}
