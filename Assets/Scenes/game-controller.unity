@@ -10028,6 +10028,18 @@ Prefab:
       propertyPath: soundVolume
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4320992183973596, guid: 0f671f32708ced9418feffd3ff58338b, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787838210399622, guid: 0f671f32708ced9418feffd3ff58338b, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867852789418674, guid: 0f671f32708ced9418feffd3ff58338b, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f671f32708ced9418feffd3ff58338b, type: 2}
   m_IsPrefabAsset: 0
@@ -10058,7 +10070,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1995644048}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &649003547
 SpriteRenderer:
@@ -10813,7 +10825,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 764262374}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!199 &1211017918
 ParticleSystemRenderer:
@@ -15705,7 +15717,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 764262374}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1408426178
 SpriteRenderer:
@@ -16170,6 +16182,18 @@ Prefab:
       propertyPath: dashSound
       value: 
       objectReference: {fileID: 8300000, guid: cc2c0dbcfdb844e4d940b7cd8001f2fb, type: 3}
+    - target: {fileID: 4716906677687914, guid: 208861b74284143109ee73ebe0e46970, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097801523663900, guid: 208861b74284143109ee73ebe0e46970, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871282951789404, guid: 208861b74284143109ee73ebe0e46970, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208861b74284143109ee73ebe0e46970, type: 2}
   m_IsPrefabAsset: 0
@@ -16394,7 +16418,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1995644048}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!199 &1833337285
 ParticleSystemRenderer:
@@ -21100,6 +21124,10 @@ MonoBehaviour:
   dashSound: {fileID: 0}
   soundVolume: 0
   behavior: {fileID: 0}
+  lastLeftPress: 0
+  lastRightPress: 0
+  lastLeftUp: 0
+  lastRightUp: 0
 --- !u!1001 &2015885486
 Prefab:
   m_ObjectHideFlags: 0
@@ -21189,6 +21217,36 @@ Prefab:
     - target: {fileID: 4445786552025894, guid: aeca0cacf7953c0429aabf737abed2b2, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114341061072889940, guid: aeca0cacf7953c0429aabf737abed2b2,
+        type: 2}
+      propertyPath: playerData.Array.data[0].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114341061072889940, guid: aeca0cacf7953c0429aabf737abed2b2,
+        type: 2}
+      propertyPath: playerData.Array.data[0].color.g
+      value: 0.4009434
+      objectReference: {fileID: 0}
+    - target: {fileID: 114341061072889940, guid: aeca0cacf7953c0429aabf737abed2b2,
+        type: 2}
+      propertyPath: playerData.Array.data[0].color.b
+      value: 0.4009434
+      objectReference: {fileID: 0}
+    - target: {fileID: 114341061072889940, guid: aeca0cacf7953c0429aabf737abed2b2,
+        type: 2}
+      propertyPath: playerData.Array.data[1].color.r
+      value: 0.42792463
+      objectReference: {fileID: 0}
+    - target: {fileID: 114341061072889940, guid: aeca0cacf7953c0429aabf737abed2b2,
+        type: 2}
+      propertyPath: playerData.Array.data[1].color.g
+      value: 0.8867924
+      objectReference: {fileID: 0}
+    - target: {fileID: 114341061072889940, guid: aeca0cacf7953c0429aabf737abed2b2,
+        type: 2}
+      propertyPath: playerData.Array.data[1].color.b
+      value: 0.2300641
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeca0cacf7953c0429aabf737abed2b2, type: 2}
