@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public enum DashDirection{
 	DOWN, RIGHT, LEFT
@@ -62,17 +63,38 @@ public class PlayerBehavior : MonoBehaviour {
 
 	private IEnumerator Die() {
 		Color color = GetComponent<SpriteRenderer>().color;
+		var particles = this.GetComponentInChildren<ParticleSystem>();
+		particles.Stop();
 
 		GetComponent<Rigidbody2D>().Sleep();
 		GetComponent<BoxCollider2D>().enabled = false;
 		color.a = color.a / 3 * 2;
-		GetComponent<SpriteRenderer>().color = color;
-		this.transform.position = playerBegin.position;
+		var sr = GetComponent<SpriteRenderer>();
+		sr.color = color;
 		dead = true;
 
+		this.transform.DOMoveY(this.transform.position.y - 1.5f, 1f);
+		var originalRotation = this.transform.rotation;
+		var rotate_tween = this.transform.DORotate(new Vector3(0f, 0f, 360f), 1f, RotateMode.FastBeyond360);
+
 		GameController.GetGameController().GiveVictoryToOtherPlayer(data.id);
-		
-		yield return new WaitForSeconds(deadTime);
+
+		yield return new WaitForSeconds(1f);
+
+		this.transform.rotation = originalRotation;
+		this.transform.position = playerBegin.position;
+
+		var originalScale = this.transform.localScale;
+		this.transform.localScale = Vector2.zero;
+
+
+		this.transform.DOScale(originalScale, 0.5f).SetEase(Ease.InBounce);
+
+		yield return new WaitForSeconds(0.5f);
+
+		particles.Play();
+
+		// rotate_tween.Kill();
 
 		dead = false;
 		color.a = 1f;

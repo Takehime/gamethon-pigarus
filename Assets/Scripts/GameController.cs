@@ -65,7 +65,7 @@ public class GameController : MonoBehaviour {
         var mark = Instantiate(victoryCounterMarkPrefab);
         mark.transform.position = Camera.main.WorldToScreenPoint(FindPlayerByData(data).transform.position);
         mark.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
-        mark.GetComponent<Image>().color = data.color;
+        mark.GetComponent<Image>().color = new Color(data.color.r, data.color.g, data.color.b, 0.5f);
         
         mark.transform.DOMove(worldCanvasMatchPoint.transform.position, 0.5f).SetEase(Ease.InFlash).OnComplete(() => {
             mark.GetComponent<Image>().DOFade(0f, 0.2f);

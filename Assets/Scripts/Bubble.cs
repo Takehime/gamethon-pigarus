@@ -18,11 +18,19 @@ public class Bubble : BounceObject {
 		
 	}
 
+	public bool alreadyTouched = false;
+
 	protected override void OnTouch() {
+		if (alreadyTouched) {
+			return;
+		}
+
+		alreadyTouched = true;
+
 		print("onTouch Bubble");
 		AudioSource audio = AudioSourceController.GetAudioSourceController().GetComponent<AudioSource>();
 		audio.PlayOneShot(bubbleSound, soundVolume);
-		audio.PlayOneShot(bubbleSound2, soundVolume2);
-		Destroy(this.gameObject);
+		this.GetComponentInChildren<Animator>().SetTrigger("bubblepop");
+		// Destroy(this.gameObject);
 	}
 }
