@@ -40,6 +40,6 @@ public class PlayMenu : Menu {
         Transition.transition.Show();
         yield return new WaitForSeconds(1f);
         print("ABRINDO SCENE");
-        SceneManager.LoadSceneAsync("MainMenu");
+        SceneManager.LoadSceneAsync("game-controller");
     }
 }
