@@ -13,7 +13,7 @@ public class BounceObject : MonoBehaviour {
     public float BounceForce(Vector2 velocity, PlayerBehavior behaviour) {
         print(velocity + " --- " + behaviour.maxVelocity);
         print(maxBounceForce + " * " + (Mathf.Abs(velocity.y) / behaviour.maxVelocity.y) + " = " + maxBounceForce * (velocity.y / behaviour.maxVelocity.y));
-		return maxBounceForce * (Mathf.Abs(velocity.y) * bounceFactor / behaviour.maxVelocity.y);
+		return maxBounceForce * (Mathf.Abs(velocity.magnitude) * bounceFactor / behaviour.maxVelocity.y);
 	}
 
     void Start() {
@@ -29,11 +29,11 @@ public class BounceObject : MonoBehaviour {
             if (behaviour.allowCollide) {
                 Vector2 oldVelocity = rb.velocity;
                 rb.velocity = Vector2.zero;
-                if (this.gameObject.tag == "Bird") {
-                    rb.AddForce(Vector2.left * BounceForce(oldVelocity, behaviour));
-                } else {
+                // if (this.gameObject.tag == "Bird") {
+                //     rb.AddForce(Vector2.left * BounceForce(oldVelocity, behaviour));
+                // } else {
                     rb.AddForce(Vector2.up * BounceForce(oldVelocity, behaviour));           
-                }
+                // }
                 print("vou chamar o onTouch....");
                 OnTouch();
                 behaviour.allowCollide = false;

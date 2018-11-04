@@ -14,7 +14,7 @@ public class obsgen : MonoBehaviour {
     float timeNone = 0.0f;
 
 	public enum Obstacles {
-		Bird = 60,
+		Bird = 15,
 		Bubble = 70,
 		Floater = 85,
 		None = 100,
