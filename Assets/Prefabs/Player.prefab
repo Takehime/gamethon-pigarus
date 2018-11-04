@@ -249,7 +249,7 @@ MonoBehaviour:
   deadTime: 2
   dead: 0
   allowCollide: 1
-  allowCollideStartCount: 3
+  allowCollideStartCount: 1
   maxVelocity: {x: 10, y: 14}
   victoryWing: {fileID: 1858421979289934}
   victoryParticles: {fileID: 198595632265277532}
@@ -278,6 +278,10 @@ MonoBehaviour:
   dashSound: {fileID: 8300000, guid: cc2c0dbcfdb844e4d940b7cd8001f2fb, type: 3}
   soundVolume: 0
   behavior: {fileID: 0}
+  lastLeftPress: 0
+  lastRightPress: 0
+  lastLeftUp: 0
+  lastRightUp: 0
 --- !u!198 &198242654437959932
 ParticleSystem:
   m_ObjectHideFlags: 1

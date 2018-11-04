@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour {
 
         Instantiate(audioSourcePrefab);
         var loopSong = Instantiate(audioSourcePrefab);
-        loopSong.tag = "";
+        loopSong.tag = "Untagged";
         var audioSource = loopSong.GetComponent<AudioSource>();
         audioSource.clip = loopClip;
         audioSource.loop = true;

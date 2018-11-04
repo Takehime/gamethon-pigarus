@@ -21,7 +21,7 @@ public class ObstaclesBehaviour : MonoBehaviour {
 		Destroy(this.gameObject);
 	}
 
-	protected void OnCollisionEnter2D(Collision2D col) {
+	protected void OnTriggerExit2D(Collider2D col) {
 		if (col.gameObject.CompareTag("destroy")) {
 			this.Destroy();
 		}
