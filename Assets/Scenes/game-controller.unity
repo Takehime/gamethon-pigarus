@@ -4885,6 +4885,26 @@ Prefab:
       propertyPath: m_Name
       value: Hazard Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 114687802569601742, guid: 37071222e41014765861d3520b6490d2,
+        type: 2}
+      propertyPath: randomWait_min
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114687802569601742, guid: 37071222e41014765861d3520b6490d2,
+        type: 2}
+      propertyPath: randomWait_max
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114687802569601742, guid: 37071222e41014765861d3520b6490d2,
+        type: 2}
+      propertyPath: spawnBubbleVelocity.x
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114687802569601742, guid: 37071222e41014765861d3520b6490d2,
+        type: 2}
+      propertyPath: maxTimeNone
+      value: 1.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37071222e41014765861d3520b6490d2, type: 2}
   m_IsPrefabAsset: 0
@@ -9764,6 +9784,11 @@ Prefab:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114510860049999160, guid: 0f671f32708ced9418feffd3ff58338b,
+        type: 2}
+      propertyPath: allowCollideStartCount
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f671f32708ced9418feffd3ff58338b, type: 2}
   m_IsPrefabAsset: 0
@@ -10683,6 +10708,11 @@ Prefab:
     - target: {fileID: 1839045112155044, guid: 208861b74284143109ee73ebe0e46970, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114791385153422530, guid: 208861b74284143109ee73ebe0e46970,
+        type: 2}
+      propertyPath: allowCollideStartCount
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208861b74284143109ee73ebe0e46970, type: 2}

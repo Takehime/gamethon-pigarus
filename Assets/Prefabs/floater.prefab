@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eecb370ed0013dc4694fab5d9b2ebd5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 20000
+  bounceForce: 16500
   tweenFactor: {x: 1.5, y: 0.8}
   tweenSquishInDuration: 0.15
   tweenSquishOutDuration: 0.05
