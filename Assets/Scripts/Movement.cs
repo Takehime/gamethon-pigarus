@@ -32,6 +32,9 @@ public class Movement : MonoBehaviour {
     public PlayerBehavior behavior;
     private Animator anim;
 
+    public float lastLeftPress, lastRightPress;
+    public float lastLeftUp, lastRightUp;
+
 	private void Start () {
         rb = GetComponent<Rigidbody2D>();
         behavior = this.GetComponentInChildren<PlayerBehavior>();
@@ -40,6 +43,16 @@ public class Movement : MonoBehaviour {
 
     private void Update()
     {
+        bool dashLeft = false, dashRight = false;
+
+        if (Input.GetKeyUp(leftButton)) {
+            lastLeftUp = Time.time;
+        }
+
+        if (Input.GetKeyUp(rightButton)) {
+            lastRightUp = Time.time;
+        }
+
         if (behavior.dead) {
             rb.velocity = Vector2.zero;
         }
@@ -49,14 +62,24 @@ public class Movement : MonoBehaviour {
                 if (Input.GetKey(leftButton))
                 {
                     Glide(Vector2.left);
+
                     if (Input.GetKeyDown(leftButton))
-                        StartCoroutine(MovementHandler(leftButton, Vector2.left));
+                    {
+                        if (Time.time - lastLeftUp < 0.15f) {
+                            StartCoroutine(Dash(Vector2.left));
+                        }
+                    }
                 }
                 if (Input.GetKey(rightButton))
                 {
                     Glide(Vector2.right);
+
                     if (Input.GetKeyDown(rightButton))
-                        StartCoroutine(MovementHandler(rightButton, Vector2.right));
+                    {
+                        if (Time.time - lastRightUp < 0.15f) {
+                            StartCoroutine(Dash(Vector2.right));
+                        }
+                    }
                 }
             }
             if (!diveLock && Input.GetKeyDown(downButton))
