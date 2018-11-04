@@ -5,9 +5,9 @@ using UnityEngine;
 using DG.Tweening;
 
 public class MenuSlide : MonoBehaviour {
-    private const float POSITION_Y_OFFSET = 720f;
+    private const float POSITION_Y_OFFSET = 720f*1.5f;
     private const float INITIAL_POSITION = 0f;
-    private const float TIME_TO_MOVE = 0.5f;
+    private const float TIME_TO_MOVE = 0.25f;
 
     [SerializeField] private Image background;
     [SerializeField] private RectTransform elementsRoot;
