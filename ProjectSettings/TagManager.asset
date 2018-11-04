@@ -12,6 +12,7 @@ TagManager:
   - Bird
   - PlayerDatabase
   - AudioSource
+  - Canvas
   layers:
   - Default
   - TransparentFX
