@@ -45,7 +45,6 @@ public class BounceObject : MonoBehaviour {
     protected virtual void OnTouch()
     {
         // Destroy(this.gameObject);
-        print("why call this");
         Squish();
     }
 

@@ -14,7 +14,7 @@ public class obsgen : MonoBehaviour {
     float timeNone = 0.0f;
 
 	public enum Obstacles {
-		Bird = 10,
+		Bird = 60,
 		Bubble = 70,
 		Floater = 85,
 		None = 100,
@@ -22,7 +22,6 @@ public class obsgen : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 		StartCoroutine(CreateObstacle());
 	}
 	
@@ -43,7 +42,7 @@ public class obsgen : MonoBehaviour {
                             newWait = 0.0f;
 							break;
 						case Obstacles.Bird:
-							Vector2 pos = new Vector2(this.transform.position.x, this.transform.position.y+6);
+							Vector2 pos = new Vector2(this.transform.position.x, this.transform.position.y+Random.Range(1.3f, 3f));
 							BirdBehaviour.Spawn(baseBird, spawnBirdVelocity, pos);
 							break;
 						default:
