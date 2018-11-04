@@ -4855,7 +4855,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4811359906366082, guid: 37071222e41014765861d3520b6490d2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.33
+      value: -3.78
       objectReference: {fileID: 0}
     - target: {fileID: 4811359906366082, guid: 37071222e41014765861d3520b6490d2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10112,6 +10112,11 @@ Prefab:
       propertyPath: m_Size.y
       value: 0.88
       objectReference: {fileID: 0}
+    - target: {fileID: 212506316769292852, guid: c6849d05398144a16801856d88af11f3,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6849d05398144a16801856d88af11f3, type: 2}
   m_IsPrefabAsset: 0
@@ -11536,29 +11541,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4111784169082880, guid: 208861b74284143109ee73ebe0e46970,
     type: 2}
   m_PrefabInternal: {fileID: 1662679751}
---- !u!114 &1995644049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1995644043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec536dc9e07a250439a4e5eaa2457714, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rightButton: 108
-  leftButton: 106
-  downButton: 107
-  dashLock: 0
-  dashTime: 0.5
-  dashOffsetTime: 0.25
-  dashForce: 22000
-  glideForce: 500
-  diveForce: 23000
-  diveTime: 0.5
-  diveLock: 0
-  behavior: {fileID: 0}
 --- !u!1001 &2015885486
 Prefab:
   m_ObjectHideFlags: 0
