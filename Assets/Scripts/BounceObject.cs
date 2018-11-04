@@ -19,20 +19,26 @@ public class BounceObject : MonoBehaviour {
         if (collision.gameObject.CompareTag("Player"))
         {
             var rb = collision.gameObject.GetComponent<Rigidbody2D>();
-            rb.velocity = Vector2.zero;
-            if (this.gameObject.tag == "Bird") {
-                rb.AddForce(Vector2.left * bounceForce);
-            } else {
-                rb.AddForce(Vector2.up * bounceForce);           
+            var behaviour = collision.gameObject.GetComponent<PlayerBehavior>();
+            if (behaviour.allowCollide) {
+                rb.velocity = Vector2.zero;
+                if (this.gameObject.tag == "Bird") {
+                    rb.AddForce(Vector2.left * bounceForce);
+                } else {
+                    rb.AddForce(Vector2.up * bounceForce);           
+                }
+                print("vou chamar o onTouch....");
+                OnTouch();
+                behaviour.allowCollide = false;
+                // StartCoroutine(behaviour.StopCollide());
             }
-
-            OnTouch();
         }
     }
 
     protected virtual void OnTouch()
     {
         // Destroy(this.gameObject);
+        print("why call this");
         Squish();
     }
 

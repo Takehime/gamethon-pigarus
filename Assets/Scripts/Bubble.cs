@@ -15,6 +15,7 @@ public class Bubble : BounceObject {
 	}
 
 	protected override void OnTouch() {
+		print("onTouch Bubble");
 		Destroy(this.gameObject);
 	}
 }

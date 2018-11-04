@@ -15,9 +15,24 @@ public class PlayerBehavior : MonoBehaviour {
 
 	private Rigidbody2D rb; 
 	[HideInInspector] public bool dead;
+	public bool allowCollide = true;
+	public int allowCollideStartCount = 5;
+	private int allowCollideCount = 5;
 
 	void Start () {
 		rb = this.GetComponent<Rigidbody2D>();
+		allowCollideCount = allowCollideStartCount;
+	}
+
+	void FixedUpdate() {
+		if (!allowCollide) {
+			if (allowCollideCount > 0) {
+				allowCollideCount--;
+			} else {
+				allowCollide = true;
+				allowCollideCount = allowCollideStartCount;
+			}
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
