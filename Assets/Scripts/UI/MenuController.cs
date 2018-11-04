@@ -46,4 +46,8 @@ public class MenuController : MonoBehaviour {
         buttons[selectedButton].SelectButton();
         slideManager.OpenSlide(selectedButton);
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
