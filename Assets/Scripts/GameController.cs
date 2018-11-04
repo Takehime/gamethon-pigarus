@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour {
 
     public List<GameObject> players = new List<GameObject>();
     public PlayerDatabase database;
+    public GameObject worldCanvasMatchPoint;
 
 	void Start () {
         database = PlayerDatabase.GetPlayerDatabase();
@@ -58,16 +59,40 @@ public class GameController : MonoBehaviour {
     }
 
     void GiveRoundVictory(PlayerData data) {
-        var color = data.color;
-        victoryCounterMarkList[currentRound++].GetComponent<Image>().DOColor(color, victoryMarkAppearDuration);
+        var mark = Instantiate(victoryCounterMarkPrefab);
+        mark.transform.position = Camera.main.WorldToScreenPoint(FindPlayerByData(data).transform.position);
+        mark.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
+        mark.GetComponent<Image>().color = data.color;
+        
+        mark.transform.DOMove(worldCanvasMatchPoint.transform.position, 0.5f).SetEase(Ease.InFlash).OnComplete(() => {
+            mark.GetComponent<Image>().DOFade(0f, 0.2f);
+            var color = data.color;
+            var image = victoryCounterMarkList[currentRound++].GetComponent<Image>();
+            image.DOColor(color, victoryMarkAppearDuration);
+            var imageOriginalScale = image.transform.localScale;
+            image.transform.DOScale(new Vector3(imageOriginalScale.x * 1.3f, imageOriginalScale.y * 1.3f), 0.125f).OnComplete(() => {
+                image.transform.DOScale(imageOriginalScale, 0.125f);
+            });
 
-        playerVictories[data.id]++;
-        if (playerVictories[data.id] > Mathf.Floor(rounds / 2)) {
-            Debug.Log("End game. Victory: player " + data.id);
-            database.winner = data;
-            database.loser = database.playerData[data.id == 0 ? 1 : 0];            
-            StartCoroutine(TransitionToGameOver());
+            playerVictories[data.id]++;
+            if (playerVictories[data.id] > Mathf.Floor(rounds / 2)) {
+                Debug.Log("End game. Victory: player " + data.id);
+                database.winner = data;
+                database.loser = database.playerData[data.id == 0 ? 1 : 0];            
+                StartCoroutine(TransitionToGameOver());
+            }
+            Destroy(mark.gameObject);
+        });
+    }
+
+    GameObject FindPlayerByData(PlayerData data) {
+        foreach (var player in GameObject.FindGameObjectsWithTag("Player")) {
+            if (player.GetComponentInChildren<PlayerBehavior>().data.id == data.id) {
+                return player;
+            }
         }
+
+        return null;
     }
 
     public IEnumerator TransitionToGameOver() {
