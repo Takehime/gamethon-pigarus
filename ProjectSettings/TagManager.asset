@@ -11,6 +11,7 @@ TagManager:
   - victory counter container
   - Bird
   - PlayerDatabase
+  - AudioSource
   layers:
   - Default
   - TransparentFX

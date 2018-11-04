@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212175287211015264}
   - component: {fileID: 50216637493769084}
   - component: {fileID: 114250356530585230}
-  - component: {fileID: 114635161933523618}
   - component: {fileID: 60346617356987910}
+  - component: {fileID: 114774911371260474}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Bird
@@ -276,7 +276,7 @@ MonoBehaviour:
   prefab: {fileID: 1076890210176122}
   maxBounceImpulse: 12000
   duration: 0.2
---- !u!114 &114635161933523618
+--- !u!114 &114774911371260474
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076890210176122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eecb370ed0013dc4694fab5d9b2ebd5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c163c02c0e38db4a9da99d5c85e770e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxBounceForce: 12000
@@ -292,6 +292,7 @@ MonoBehaviour:
   tweenFactor: {x: 1.5, y: 0.8}
   tweenSquishInDuration: 0.15
   tweenSquishOutDuration: 0.05
+  birdSound: {fileID: 8300000, guid: cbb8f1c6ef9075947828d1ca701d4e7e, type: 3}
 --- !u!212 &212175287211015264
 SpriteRenderer:
   m_ObjectHideFlags: 1
