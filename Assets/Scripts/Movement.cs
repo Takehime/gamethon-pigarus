@@ -90,16 +90,23 @@ public class Movement : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        if (Mathf.Abs(rb.velocity.x) > 2f) {
-            anim.SetBool("glide", true);
-            if (rb.velocity.x > 0) {
-                transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-            } 
-            if (rb.velocity.x < 0) {
-                transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);         
-            }
-        } else {
+        if (rb.velocity.y < -3f) {
+            print(rb.velocity);
+            anim.SetBool("dash", true);
             anim.SetBool("glide", false);
+        } else {
+            anim.SetBool("dash", false);
+            if (Mathf.Abs(rb.velocity.x) > 2f) {
+                anim.SetBool("glide", true);
+                if (rb.velocity.x > 0) {
+                    transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                } 
+                if (rb.velocity.x < 0) {
+                    transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);         
+                }
+            } else {
+                anim.SetBool("glide", false);
+            }
         }
     }
 
