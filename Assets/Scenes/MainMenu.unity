@@ -7326,7 +7326,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1335288040}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -9315,22 +9315,22 @@ Prefab:
     - target: {fileID: 224624505662938244, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 428.75
       objectReference: {fileID: 0}
     - target: {fileID: 224624505662938244, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -54.45
       objectReference: {fileID: 0}
     - target: {fileID: 224624505662938244, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 272.5
       objectReference: {fileID: 0}
     - target: {fileID: 224624505662938244, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 108.9
       objectReference: {fileID: 0}
     - target: {fileID: 224624505662938244, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
         type: 2}
@@ -9340,7 +9340,7 @@ Prefab:
     - target: {fileID: 224624505662938244, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224624505662938244, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
         type: 2}
@@ -9350,7 +9350,7 @@ Prefab:
     - target: {fileID: 224624505662938244, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224624505662938244, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
         type: 2}
@@ -9532,6 +9532,10 @@ Prefab:
         type: 2}
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950821095621884, guid: 5ef285cb48a44c3439b7ad592fb3c3f5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef285cb48a44c3439b7ad592fb3c3f5, type: 2}

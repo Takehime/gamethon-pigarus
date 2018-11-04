@@ -44,7 +44,9 @@ public class Movement : MonoBehaviour {
     private void Update()
     {
         bool dashLeft = false, dashRight = false;
-
+        if (behavior.hasWon) {
+            return;
+        }
         if (Input.GetKeyUp(leftButton)) {
             lastLeftUp = Time.time;
         }
@@ -90,6 +92,9 @@ public class Movement : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        if (behavior.hasWon) {
+            return;
+        }
         if (rb.velocity.y < -3f) {
             print(rb.velocity);
             anim.SetBool("dash", true);

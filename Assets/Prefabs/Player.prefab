@@ -271,7 +271,7 @@ MonoBehaviour:
   dashTime: 0.5
   dashOffsetTime: 0.25
   dashForce: 22000
-  glideForce: 500
+  glideForce: 200
   diveForce: 23000
   diveTime: 0.5
   diveLock: 0
