@@ -30,6 +30,7 @@ public class Movement : MonoBehaviour {
 
     private Rigidbody2D rb;
     public PlayerBehavior behavior;
+    private Animator anim;
 
     public float lastLeftPress, lastRightPress;
     public float lastLeftUp, lastRightUp;
@@ -37,6 +38,7 @@ public class Movement : MonoBehaviour {
 	private void Start () {
         rb = GetComponent<Rigidbody2D>();
         behavior = this.GetComponentInChildren<PlayerBehavior>();
+        anim = GetComponent<Animator>();
 	}
 
     private void Update()
@@ -87,6 +89,20 @@ public class Movement : MonoBehaviour {
         }
     }
 
+    void FixedUpdate() {
+        if (Mathf.Abs(rb.velocity.x) > 2f) {
+            anim.SetBool("glide", true);
+            if (rb.velocity.x > 0) {
+                transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            } 
+            if (rb.velocity.x < 0) {
+                transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);         
+            }
+        } else {
+            anim.SetBool("glide", false);
+        }
+    }
+
     private IEnumerator MovementHandler(KeyCode key, Vector2 dir)
     {
         float timer = dashOffsetTime; 
@@ -110,8 +126,8 @@ public class Movement : MonoBehaviour {
             dashLock = true;
             rb.velocity = new Vector2(0, rb.velocity.y);
             rb.AddForce(dir * dashForce);
-            AudioSource audio = AudioSourceController.GetAudioSourceController().GetComponent<AudioSource>();
-		    audio.PlayOneShot(dashSound, soundVolume);
+            // AudioSource audio = AudioSourceController.GetAudioSourceController().GetComponent<AudioSource>();
+		    // audio.PlayOneShot(dashSound, soundVolume);
             yield return new WaitForSeconds(dashTime);
             dashLock = false;
         }

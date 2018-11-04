@@ -222,13 +222,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxBounceForce: 12000
   bounceFactor: 1.2
+  minBounceForce: 2500
   tweenFactor: {x: 1.5, y: 0.8}
   tweenSquishInDuration: 0.15
   tweenSquishOutDuration: 0.05
   bubbleSound: {fileID: 8300000, guid: a8aa7be0759399a48ae50d2a906d2828, type: 3}
   bubbleSound2: {fileID: 8300000, guid: ebea19ada9159bc4eb8b56dbd0a5d8b8, type: 3}
-  soundVolume: 0.6
-  soundVolume2: 0.6
+  soundVolume: 2
+  soundVolume2: 0
+  alreadyTouched: 0
 --- !u!114 &114308929897125624
 MonoBehaviour:
   m_ObjectHideFlags: 1

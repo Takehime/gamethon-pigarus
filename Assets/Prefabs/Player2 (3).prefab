@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 50447506862731672}
   - component: {fileID: 61912241287539888}
   - component: {fileID: 114556644056293844}
+  - component: {fileID: 95153258260242094}
   m_Layer: 8
   m_Name: Player2 (3)
   m_TagString: Player
@@ -212,6 +213,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &95153258260242094
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1431063066232394}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa746dda105b25241a13dd2ae869fc33, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114510860049999160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,6 +275,8 @@ MonoBehaviour:
   diveForce: 23000
   diveTime: 0.5
   diveLock: 0
+  dashSound: {fileID: 0}
+  soundVolume: 1
   behavior: {fileID: 0}
 --- !u!198 &198478352340541904
 ParticleSystem:
