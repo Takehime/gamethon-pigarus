@@ -25,11 +25,13 @@ public class GameController : MonoBehaviour {
 
     List<GameObject> victoryCounterMarkList = new List<GameObject>();
     int currentRound = 0;
+    public bool isGameOver = false;
 
     public List<GameObject> players = new List<GameObject>();
     public PlayerDatabase database;
     public GameObject worldCanvasMatchPoint;
     public GameObject audioSourcePrefab;
+    public Image whiteScreen;
 
 	void Start () {
         database = PlayerDatabase.GetPlayerDatabase();
@@ -66,6 +68,7 @@ public class GameController : MonoBehaviour {
         mark.transform.position = Camera.main.WorldToScreenPoint(FindPlayerByData(data).transform.position);
         mark.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
         mark.GetComponent<Image>().color = new Color(data.color.r, data.color.g, data.color.b, 0.5f);
+        mark.transform.SetAsFirstSibling();
         
         mark.transform.DOMove(worldCanvasMatchPoint.transform.position, 0.5f).SetEase(Ease.InFlash).OnComplete(() => {
             mark.GetComponent<Image>().DOFade(0f, 0.2f);
@@ -79,6 +82,8 @@ public class GameController : MonoBehaviour {
 
             playerVictories[data.id]++;
             if (playerVictories[data.id] > Mathf.Floor(rounds / 2)) {
+                isGameOver = true;
+                Time.timeScale = 0.5f;
                 Debug.Log("End game. Victory: player " + data.id);
                 database.winner = data;
                 database.loser = database.playerData[data.id == 0 ? 1 : 0];            
@@ -99,7 +104,9 @@ public class GameController : MonoBehaviour {
     }
 
     public IEnumerator TransitionToGameOver() {
-        yield return new WaitForSeconds(1f);
+        whiteScreen.DOFade(1f, 0.5f);
+        yield return new WaitForSeconds(0.75f);
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Victory Scene");
     }
 

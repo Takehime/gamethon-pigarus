@@ -21,7 +21,13 @@ public class PlayerBehavior : MonoBehaviour {
 	private int allowCollideCount = 5;
 	public Vector2 maxVelocity;
 
+	public GameObject victoryWing;
+	public ParticleSystem victoryParticles;
+
+	GameController gc;
+
 	void Start () {
+		gc = GameController.GetGameController();
 		rb = this.GetComponent<Rigidbody2D>();
 		allowCollideCount = allowCollideStartCount;
 	}
@@ -81,17 +87,24 @@ public class PlayerBehavior : MonoBehaviour {
 
 		yield return new WaitForSeconds(1f);
 
-		this.transform.rotation = originalRotation;
-		this.transform.position = playerBegin.position;
+		if (!gc.isGameOver) {
+			this.transform.rotation = originalRotation;
+			this.transform.position = playerBegin.position;
 
-		var originalScale = this.transform.localScale;
-		this.transform.localScale = Vector2.zero;
+			var originalScale = this.transform.localScale;
+			this.transform.localScale = Vector2.zero;
 
+			this.transform.DOScale(originalScale, 0.5f).SetEase(Ease.InBounce);
 
-		this.transform.DOScale(originalScale, 0.5f).SetEase(Ease.InBounce);
+			yield return new WaitForSeconds(0.5f);
 
-		yield return new WaitForSeconds(0.5f);
+			StartCoroutine(Revive());
+		}
+	}
 
+	public IEnumerator Revive() {
+		Color color = GetComponent<SpriteRenderer>().color;
+		var particles = this.GetComponentInChildren<ParticleSystem>();
 		particles.Play();
 
 		// rotate_tween.Kill();
@@ -101,5 +114,17 @@ public class PlayerBehavior : MonoBehaviour {
 		GetComponent<SpriteRenderer>().color = color;
 		GetComponent<Rigidbody2D>().WakeUp();
 		GetComponent<BoxCollider2D>().enabled = true;
+
+		yield break;
+	}
+
+	public void VictoryAnimation() {
+		victoryParticles.Play();
+		victoryWing.SetActive(true);
+		var sr = victoryWing.GetComponentInChildren<SpriteRenderer>();
+		sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0f);
+		sr.DOFade(1f, 0.25f);
+		var originalScale = victoryWing.transform.localScale;
+		victoryWing.transform.DOScale(new Vector3(originalScale.x * 1.5f, originalScale.y * 1.5f, originalScale.z), 2f).SetEase(Ease.InExpo);
 	}
 }
