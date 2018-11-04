@@ -6,14 +6,21 @@ using DG.Tweening;
 public class BounceObject : MonoBehaviour {
     protected Vector3 originalScale;
 
-    [SerializeField] private float maxBounceForce, bounceFactor = 1.2f;
+    [SerializeField] private float maxBounceForce, bounceFactor = 1.2f, minBounceForce;
     [SerializeField] Vector2 tweenFactor = new Vector2(1.5f, 0.8f);
     [SerializeField] float tweenSquishInDuration = 0.15f, tweenSquishOutDuration = 0.05f;
 
     public float BounceForce(Vector2 velocity, PlayerBehavior behaviour) {
         // print(velocity + " --- " + behaviour.maxVelocity);
         // print(maxBounceForce + " * " + (Mathf.Abs(velocity.y) / behaviour.maxVelocity.y) + " = " + maxBounceForce * (velocity.y / behaviour.maxVelocity.y));
-		return maxBounceForce * (Mathf.Abs(velocity.magnitude) * bounceFactor / behaviour.maxVelocity.y);
+        float bounce = maxBounceForce * (Mathf.Abs(velocity.magnitude) * bounceFactor / behaviour.maxVelocity.y);
+		if (bounce < minBounceForce) {
+            return minBounceForce;
+        }
+        if (bounce > maxBounceForce) {
+            return maxBounceForce;
+        }
+        return bounce;
 	}
 
     void Start() {

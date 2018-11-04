@@ -289,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxBounceForce: 12000
   bounceFactor: 1.9
+  minBounceForce: 6000
   tweenFactor: {x: 1.5, y: 0.8}
   tweenSquishInDuration: 0.15
   tweenSquishOutDuration: 0.05

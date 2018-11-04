@@ -58,6 +58,6 @@ MonoBehaviour:
   spawnBubbleVelocity: {x: -5.5, y: 0}
   spawnFloaterVelocity: {x: -4, y: 0}
   spawnBirdVelocity: {x: -5, y: -2}
-  maxTimeNone: 1.5
-  randomWait_min: 0.4
-  randomWait_max: 0.8
+  maxTimeNone: 2
+  randomWait_min: 0.6
+  randomWait_max: 1.2
