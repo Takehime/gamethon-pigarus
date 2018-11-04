@@ -6,9 +6,15 @@ using DG.Tweening;
 public class BounceObject : MonoBehaviour {
     Vector3 originalScale;
 
-    [SerializeField] private float bounceForce;
+    [SerializeField] private float maxBounceForce, bounceFactor = 1.2f;
     [SerializeField] Vector2 tweenFactor = new Vector2(1.5f, 0.8f);
     [SerializeField] float tweenSquishInDuration = 0.15f, tweenSquishOutDuration = 0.05f;
+
+    public float BounceForce(Vector2 velocity, PlayerBehavior behaviour) {
+        print(velocity + " --- " + behaviour.maxVelocity);
+        print(maxBounceForce + " * " + (Mathf.Abs(velocity.y) / behaviour.maxVelocity.y) + " = " + maxBounceForce * (velocity.y / behaviour.maxVelocity.y));
+		return maxBounceForce * (Mathf.Abs(velocity.y) * bounceFactor / behaviour.maxVelocity.y);
+	}
 
     void Start() {
         originalScale = this.transform.localScale;
@@ -21,11 +27,12 @@ public class BounceObject : MonoBehaviour {
             var rb = collision.gameObject.GetComponent<Rigidbody2D>();
             var behaviour = collision.gameObject.GetComponent<PlayerBehavior>();
             if (behaviour.allowCollide) {
+                Vector2 oldVelocity = rb.velocity;
                 rb.velocity = Vector2.zero;
                 if (this.gameObject.tag == "Bird") {
-                    rb.AddForce(Vector2.left * bounceForce);
+                    rb.AddForce(Vector2.left * BounceForce(oldVelocity, behaviour));
                 } else {
-                    rb.AddForce(Vector2.up * bounceForce);           
+                    rb.AddForce(Vector2.up * BounceForce(oldVelocity, behaviour));           
                 }
                 print("vou chamar o onTouch....");
                 OnTouch();

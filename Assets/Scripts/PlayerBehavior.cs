@@ -18,6 +18,7 @@ public class PlayerBehavior : MonoBehaviour {
 	public bool allowCollide = true;
 	public int allowCollideStartCount = 5;
 	private int allowCollideCount = 5;
+	public Vector2 maxVelocity;
 
 	void Start () {
 		rb = this.GetComponent<Rigidbody2D>();
@@ -32,6 +33,16 @@ public class PlayerBehavior : MonoBehaviour {
 				allowCollide = true;
 				allowCollideCount = allowCollideStartCount;
 			}
+		}
+		if (Mathf.Abs(rb.velocity.x) > maxVelocity.x) {
+			rb.velocity = new Vector2(
+				(rb.velocity.x > 0) ? maxVelocity.x : -maxVelocity.x,
+				rb.velocity.y);
+		}
+		if (Mathf.Abs(rb.velocity.y) > maxVelocity.y) {
+			rb.velocity = new Vector2(
+				rb.velocity.x,
+				(rb.velocity.y > 0) ? maxVelocity.y : -maxVelocity.y);			
 		}
 	}
 

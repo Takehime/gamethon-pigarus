@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: -5, y: 0}
   prefab: {fileID: 0}
-  bounceImpulse: 500
+  maxBounceImpulse: 0
   tweenFactor: {x: 1.5, y: 0.8}
   tweenSquishInDuration: 0.15
   tweenSquishOutDuration: 0.05
@@ -137,7 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eecb370ed0013dc4694fab5d9b2ebd5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 16500
+  maxBounceForce: 16500
+  bounceFactor: 1.4
   tweenFactor: {x: 1.5, y: 0.8}
   tweenSquishInDuration: 0.15
   tweenSquishOutDuration: 0.05

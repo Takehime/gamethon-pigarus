@@ -6,9 +6,7 @@ public class ObstaclesBehaviour : MonoBehaviour {
 
 	[SerializeField] protected Vector2 velocity;
 	[SerializeField] protected GameObject prefab;
-	[SerializeField] protected float bounceImpulse;
-	public float BounceImpulse { get { return bounceImpulse; } set { bounceImpulse = value; } }
-	
+	[SerializeField] protected float maxBounceImpulse;
 
 	// Use this for initialization
 	// virtual protected void Start() {
