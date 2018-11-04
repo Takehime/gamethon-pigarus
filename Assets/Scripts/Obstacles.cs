@@ -23,7 +23,16 @@ public class ObstaclesBehaviour : MonoBehaviour {
 
 	protected void OnTriggerExit2D(Collider2D col) {
 		if (col.gameObject.CompareTag("destroy")) {
+			if (this.gameObject.tag == "Bird") {
+				StartCoroutine(DieBird());
+				return;
+			}
 			this.Destroy();
 		}
+	}
+
+	IEnumerator DieBird() {
+		yield return new WaitForSeconds(10f);
+		this.Destroy();
 	}
 }
