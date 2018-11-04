@@ -25,6 +25,7 @@ public class PlayerBehavior : MonoBehaviour {
 	public ParticleSystem victoryParticles;
 
 	GameController gc;
+	public bool hasWon = false;
 
 	void Start () {
 		gc = GameController.GetGameController();
@@ -33,6 +34,10 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+		if (hasWon) {
+			rb.velocity = Vector2.zero;
+			return;
+		}
 		if (!allowCollide) {
 			if (allowCollideCount > 0) {
 				allowCollideCount--;
@@ -54,6 +59,9 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
+		if (hasWon) {
+			return;
+		}
 		if (collision.gameObject.CompareTag("floor")) {
 			if (allowCollide) {
 				allowCollide = false;
@@ -119,6 +127,7 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 
 	public void VictoryAnimation() {
+		hasWon = true;
 		rb.velocity = Vector2.zero;
 		this.transform.DOMoveY(this.transform.position.y + 1, 0.5f);
 		victoryParticles.Play();
