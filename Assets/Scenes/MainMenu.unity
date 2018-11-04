@@ -555,6 +555,33 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114005014039360526, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fc90f6fe846502c4887714518435c09a,
+        type: 2}
+    - target: {fileID: 114005014039360526, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 21435522557010054, guid: fc90f6fe846502c4887714518435c09a,
+        type: 2}
+    - target: {fileID: 114773354450540264, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.59126914
+      objectReference: {fileID: 0}
+    - target: {fileID: 114773354450540264, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.9413369
+      objectReference: {fileID: 0}
+    - target: {fileID: 114773354450540264, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.9716981
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef285cb48a44c3439b7ad592fb3c3f5, type: 2}
   m_IsPrefabAsset: 0
@@ -939,7 +966,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 03b4ea2d7e2156a4fa30aeb93fb9def2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80628365a10e30c4ab70f3e827620f9d, type: 3}
   m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1023,7 +1050,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 03b4ea2d7e2156a4fa30aeb93fb9def2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80628365a10e30c4ab70f3e827620f9d, type: 3}
   m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1107,7 +1134,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 03b4ea2d7e2156a4fa30aeb93fb9def2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80628365a10e30c4ab70f3e827620f9d, type: 3}
   m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4094,6 +4121,21 @@ Prefab:
       propertyPath: m_fontColor32.rgba
       value: 4289350713
       objectReference: {fileID: 0}
+    - target: {fileID: 114773354450540264, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.59126914
+      objectReference: {fileID: 0}
+    - target: {fileID: 114773354450540264, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.9413369
+      objectReference: {fileID: 0}
+    - target: {fileID: 114773354450540264, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.9716981
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef285cb48a44c3439b7ad592fb3c3f5, type: 2}
   m_IsPrefabAsset: 0
@@ -4336,7 +4378,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 03b4ea2d7e2156a4fa30aeb93fb9def2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80628365a10e30c4ab70f3e827620f9d, type: 3}
   m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6994,6 +7036,21 @@ Prefab:
       propertyPath: m_fontColor32.rgba
       value: 4289350713
       objectReference: {fileID: 0}
+    - target: {fileID: 114773354450540264, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.59126914
+      objectReference: {fileID: 0}
+    - target: {fileID: 114773354450540264, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.9413369
+      objectReference: {fileID: 0}
+    - target: {fileID: 114773354450540264, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.9716981
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef285cb48a44c3439b7ad592fb3c3f5, type: 2}
   m_IsPrefabAsset: 0
@@ -9473,6 +9530,21 @@ Prefab:
         type: 2}
       propertyPath: m_fontColor32.rgba
       value: 4289350713
+      objectReference: {fileID: 0}
+    - target: {fileID: 114773354450540264, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.59126914
+      objectReference: {fileID: 0}
+    - target: {fileID: 114773354450540264, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.9413369
+      objectReference: {fileID: 0}
+    - target: {fileID: 114773354450540264, guid: 5ef285cb48a44c3439b7ad592fb3c3f5,
+        type: 2}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.9716981
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef285cb48a44c3439b7ad592fb3c3f5, type: 2}
