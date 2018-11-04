@@ -34,6 +34,8 @@ public class GameController : MonoBehaviour {
     public Image whiteScreen;
 
 	void Start () {
+        Application.targetFrameRate = 30;
+        
         database = PlayerDatabase.GetPlayerDatabase();
 
         victoryCounterContainer = GameObject.FindWithTag("victory counter container");
@@ -83,10 +85,10 @@ public class GameController : MonoBehaviour {
             playerVictories[data.id]++;
             if (playerVictories[data.id] > Mathf.Floor(rounds / 2)) {
                 isGameOver = true;
-                Time.timeScale = 0.5f;
                 Debug.Log("End game. Victory: player " + data.id);
                 database.winner = data;
                 database.loser = database.playerData[data.id == 0 ? 1 : 0];            
+                FindPlayerByData(data).GetComponentInChildren<PlayerBehavior>().VictoryAnimation();
                 StartCoroutine(TransitionToGameOver());
             }
             Destroy(mark.gameObject);
@@ -104,6 +106,7 @@ public class GameController : MonoBehaviour {
     }
 
     public IEnumerator TransitionToGameOver() {
+        yield return new WaitForSeconds(1.5f);
         whiteScreen.DOFade(1f, 0.5f);
         yield return new WaitForSeconds(0.75f);
         Time.timeScale = 1f;
