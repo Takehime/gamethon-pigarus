@@ -274,8 +274,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: -5, y: -2}
   prefab: {fileID: 1076890210176122}
-  maxBounceImpulse: 50
-  duration: 0.5
+  maxBounceImpulse: 12000
+  duration: 0.2
 --- !u!114 &114635161933523618
 MonoBehaviour:
   m_ObjectHideFlags: 1
