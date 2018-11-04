@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4872111298904100}
   - component: {fileID: 212846618706791808}
   - component: {fileID: 50706449604040554}
-  - component: {fileID: 114903267078768336}
   - component: {fileID: 114137975653017958}
   - component: {fileID: 60912894635012602}
+  - component: {fileID: 114496240684979980}
   m_Layer: 0
   m_Name: floater
   m_TagString: Untagged
@@ -126,7 +126,7 @@ MonoBehaviour:
   tweenFactor: {x: 1.5, y: 0.8}
   tweenSquishInDuration: 0.15
   tweenSquishOutDuration: 0.05
---- !u!114 &114903267078768336
+--- !u!114 &114496240684979980
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1334695442114666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eecb370ed0013dc4694fab5d9b2ebd5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1498d498ea50bcb4c80ca33d4cc1bd22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxBounceForce: 16500
@@ -142,6 +142,8 @@ MonoBehaviour:
   tweenFactor: {x: 1.5, y: 0.8}
   tweenSquishInDuration: 0.15
   tweenSquishOutDuration: 0.05
+  floaterSound: {fileID: 8300000, guid: dfd5f17507e5b784eac396d06ca3f3b7, type: 3}
+  soundVolume: 0.6
 --- !u!212 &212846618706791808
 SpriteRenderer:
   m_ObjectHideFlags: 1

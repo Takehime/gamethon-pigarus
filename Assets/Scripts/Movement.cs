@@ -24,6 +24,10 @@ public class Movement : MonoBehaviour {
     public float diveTime;
     public bool diveLock;
 
+    [Header("Sound")]
+    public AudioClip dashSound;
+    public float soundVolume = 1.0f;
+
     private Rigidbody2D rb;
     public PlayerBehavior behavior;
 
@@ -83,6 +87,8 @@ public class Movement : MonoBehaviour {
             dashLock = true;
             rb.velocity = new Vector2(0, rb.velocity.y);
             rb.AddForce(dir * dashForce);
+            AudioSource audio = AudioSourceController.GetAudioSourceController().GetComponent<AudioSource>();
+		    audio.PlayOneShot(dashSound, soundVolume);
             yield return new WaitForSeconds(dashTime);
             dashLock = false;
         }

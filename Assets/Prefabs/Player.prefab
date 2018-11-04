@@ -162,6 +162,8 @@ MonoBehaviour:
   diveForce: 23000
   diveTime: 0.5
   diveLock: 0
+  dashSound: {fileID: 8300000, guid: cc2c0dbcfdb844e4d940b7cd8001f2fb, type: 3}
+  soundVolume: 0
   behavior: {fileID: 0}
 --- !u!198 &198242654437959932
 ParticleSystem:

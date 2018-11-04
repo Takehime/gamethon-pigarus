@@ -293,6 +293,7 @@ MonoBehaviour:
   tweenSquishInDuration: 0.15
   tweenSquishOutDuration: 0.05
   birdSound: {fileID: 8300000, guid: cbb8f1c6ef9075947828d1ca701d4e7e, type: 3}
+  soundVolume: 0.5
 --- !u!212 &212175287211015264
 SpriteRenderer:
   m_ObjectHideFlags: 1

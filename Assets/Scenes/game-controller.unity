@@ -10003,6 +10003,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114556644056293844, guid: 0f671f32708ced9418feffd3ff58338b,
+        type: 2}
+      propertyPath: dashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cc2c0dbcfdb844e4d940b7cd8001f2fb, type: 3}
+    - target: {fileID: 114556644056293844, guid: 0f671f32708ced9418feffd3ff58338b,
+        type: 2}
+      propertyPath: soundVolume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f671f32708ced9418feffd3ff58338b, type: 2}
   m_IsPrefabAsset: 0
@@ -11281,6 +11291,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114907118210080644, guid: 208861b74284143109ee73ebe0e46970,
+        type: 2}
+      propertyPath: dashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cc2c0dbcfdb844e4d940b7cd8001f2fb, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208861b74284143109ee73ebe0e46970, type: 2}
   m_IsPrefabAsset: 0
@@ -11558,6 +11573,8 @@ MonoBehaviour:
   diveForce: 23000
   diveTime: 0.5
   diveLock: 0
+  dashSound: {fileID: 0}
+  soundVolume: 0
   behavior: {fileID: 0}
 --- !u!1001 &2015885486
 Prefab:

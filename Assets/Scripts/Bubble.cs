@@ -6,6 +6,7 @@ public class Bubble : BounceObject {
 
 	public AudioClip bubbleSound;
 	public AudioClip bubbleSound2;
+	public float soundVolume = 1.0f, soundVolume2 = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -20,8 +21,8 @@ public class Bubble : BounceObject {
 	protected override void OnTouch() {
 		print("onTouch Bubble");
 		AudioSource audio = AudioSourceController.GetAudioSourceController().GetComponent<AudioSource>();
-		audio.PlayOneShot(bubbleSound);
-		audio.PlayOneShot(bubbleSound2);
+		audio.PlayOneShot(bubbleSound, soundVolume);
+		audio.PlayOneShot(bubbleSound2, soundVolume2);
 		Destroy(this.gameObject);
 	}
 }
