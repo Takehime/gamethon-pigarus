@@ -33,6 +33,8 @@ public class GameController : MonoBehaviour {
     public GameObject audioSourcePrefab;
     public Image whiteScreen;
 
+    public AudioClip loopClip;
+
 	void Start () {
         database = PlayerDatabase.GetPlayerDatabase();
 
@@ -40,6 +42,13 @@ public class GameController : MonoBehaviour {
         InitializeVictoryCounter(victoryCounterContainer);
 
         Instantiate(audioSourcePrefab);
+        var loopSong = Instantiate(audioSourcePrefab);
+        loopSong.tag = "";
+        var audioSource = loopSong.GetComponent<AudioSource>();
+        audioSource.clip = loopClip;
+        audioSource.loop = true;
+        audioSource.volume = 0.5f;
+        audioSource.Play();
 
         foreach (var pd in database.playerData) {
             playerVictories.Add(0);
