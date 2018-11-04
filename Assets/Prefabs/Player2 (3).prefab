@@ -271,13 +271,17 @@ MonoBehaviour:
   dashTime: 0.5
   dashOffsetTime: 0.25
   dashForce: 22000
-  glideForce: 500
+  glideForce: 200
   diveForce: 23000
   diveTime: 0.5
   diveLock: 0
   dashSound: {fileID: 0}
   soundVolume: 1
   behavior: {fileID: 0}
+  lastLeftPress: 0
+  lastRightPress: 0
+  lastLeftUp: 0
+  lastRightUp: 0
 --- !u!198 &198478352340541904
 ParticleSystem:
   m_ObjectHideFlags: 1

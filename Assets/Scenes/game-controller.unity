@@ -9939,6 +9939,26 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 212927789784799888, guid: c01d66d6ad29b2c4bac6c06eada9cbb2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 212154679753755496, guid: c01d66d6ad29b2c4bac6c06eada9cbb2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 212705321365430284, guid: c01d66d6ad29b2c4bac6c06eada9cbb2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 212953335185098232, guid: c01d66d6ad29b2c4bac6c06eada9cbb2,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c01d66d6ad29b2c4bac6c06eada9cbb2, type: 2}
   m_IsPrefabAsset: 0
@@ -15922,7 +15942,7 @@ Prefab:
     - target: {fileID: 114429917760279294, guid: 864d7912450c1470d96f4feed8355add,
         type: 2}
       propertyPath: rounds
-      value: 11
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1449512166895846, guid: 864d7912450c1470d96f4feed8355add, type: 2}
       propertyPath: m_Name
@@ -16198,11 +16218,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4097801523663900, guid: 208861b74284143109ee73ebe0e46970, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4871282951789404, guid: 208861b74284143109ee73ebe0e46970, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208861b74284143109ee73ebe0e46970, type: 2}
