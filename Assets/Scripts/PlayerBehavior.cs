@@ -119,6 +119,8 @@ public class PlayerBehavior : MonoBehaviour {
 	}
 
 	public void VictoryAnimation() {
+		rb.velocity = Vector2.zero;
+		this.transform.DOMoveY(this.transform.position.y + 1, 0.5f);
 		victoryParticles.Play();
 		victoryWing.SetActive(true);
 		var sr = victoryWing.GetComponentInChildren<SpriteRenderer>();
