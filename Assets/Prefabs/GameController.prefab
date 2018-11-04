@@ -57,6 +57,7 @@ MonoBehaviour:
   rounds: 5
   playerVictories: 
   victoryMarkAppearDuration: 0.5
+  isGameOver: 0
   players:
   - {fileID: 1839045112155044, guid: 208861b74284143109ee73ebe0e46970, type: 2}
   - {fileID: 0}
@@ -64,3 +65,5 @@ MonoBehaviour:
   worldCanvasMatchPoint: {fileID: 0}
   audioSourcePrefab: {fileID: 1829474158610230, guid: 1498760964d0adc4ea25f010b4dca2ef,
     type: 2}
+  whiteScreen: {fileID: 0}
+  loopClip: {fileID: 8300000, guid: ab738ae0eba5db8419ac0066919a4ec3, type: 3}

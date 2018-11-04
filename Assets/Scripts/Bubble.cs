@@ -26,7 +26,7 @@ public class Bubble : BounceObject {
 		}
 
 		alreadyTouched = true;
-
+		GetComponent<PolygonCollider2D>().enabled = false;
 		print("onTouch Bubble");
 		AudioSource audio = AudioSourceController.GetAudioSourceController().GetComponent<AudioSource>();
 		audio.PlayOneShot(bubbleSound, soundVolume);
