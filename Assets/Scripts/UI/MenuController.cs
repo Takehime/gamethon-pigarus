@@ -21,6 +21,7 @@ public class MenuController : MonoBehaviour {
     {
         if (!selectionLock)
         {
+            /*
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 Select(Mathf.Clamp(selectedButton + 1, 0, buttons.Count - 1));
@@ -28,6 +29,7 @@ public class MenuController : MonoBehaviour {
             {
                 Select(Mathf.Clamp(selectedButton - 1, 0, buttons.Count - 1));
             }
+            */
         }
     }
     private void InitializeButton()
