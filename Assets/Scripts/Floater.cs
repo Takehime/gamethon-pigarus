@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bird : BounceObject {
+public class Floater : BounceObject {
 
-	public AudioClip birdSound;
-	public float soundVolume = 1.0f;
+	public AudioClip floaterSound;
+	public float soundVolume;
 
 	// Use this for initialization
 	void Start () {
-		
+		originalScale = this.transform.localScale;
+
 	}
 	
 	// Update is called once per frame
@@ -18,8 +19,8 @@ public class Bird : BounceObject {
 	}
 
 	protected override void OnTouch() {
+		Squish();
 		AudioSource audio = AudioSourceController.GetAudioSourceController().GetComponent<AudioSource>();
-		audio.PlayOneShot(birdSound, soundVolume);
+		audio.PlayOneShot(floaterSound, soundVolume);
 	}
-
 }

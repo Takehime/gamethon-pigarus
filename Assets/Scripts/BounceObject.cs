@@ -4,15 +4,15 @@ using UnityEngine;
 using DG.Tweening;
 
 public class BounceObject : MonoBehaviour {
-    Vector3 originalScale;
+    protected Vector3 originalScale;
 
     [SerializeField] private float maxBounceForce, bounceFactor = 1.2f;
     [SerializeField] Vector2 tweenFactor = new Vector2(1.5f, 0.8f);
     [SerializeField] float tweenSquishInDuration = 0.15f, tweenSquishOutDuration = 0.05f;
 
     public float BounceForce(Vector2 velocity, PlayerBehavior behaviour) {
-        print(velocity + " --- " + behaviour.maxVelocity);
-        print(maxBounceForce + " * " + (Mathf.Abs(velocity.y) / behaviour.maxVelocity.y) + " = " + maxBounceForce * (velocity.y / behaviour.maxVelocity.y));
+        // print(velocity + " --- " + behaviour.maxVelocity);
+        // print(maxBounceForce + " * " + (Mathf.Abs(velocity.y) / behaviour.maxVelocity.y) + " = " + maxBounceForce * (velocity.y / behaviour.maxVelocity.y));
 		return maxBounceForce * (Mathf.Abs(velocity.magnitude) * bounceFactor / behaviour.maxVelocity.y);
 	}
 
@@ -49,8 +49,10 @@ public class BounceObject : MonoBehaviour {
     }
 
     public void Squish() {
+        print("In: " + originalScale);
         this.transform.DOScale(new Vector3(originalScale.x * tweenFactor.x, originalScale.y * tweenFactor.y), tweenSquishInDuration).OnComplete(() =>
         {
+            print("Out: " + originalScale);
             this.transform.DOScale(originalScale, tweenSquishOutDuration);
         });
     }
