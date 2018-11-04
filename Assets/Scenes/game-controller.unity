@@ -6773,8 +6773,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4111784169082880, guid: 208861b74284143109ee73ebe0e46970,
     type: 2}
   m_PrefabInternal: {fileID: 1662679751}
-<<<<<<< HEAD
-=======
 --- !u!114 &1995644049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6873,7 +6871,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
->>>>>>> 730eb8550c2cc6bb1ff59d0c1802ddf2dfa6f37d
 --- !u!1001 &2015885486
 Prefab:
   m_ObjectHideFlags: 0
